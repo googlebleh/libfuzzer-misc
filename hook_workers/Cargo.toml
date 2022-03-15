@@ -1,0 +1,19 @@
+[package]
+name = "hook_workers"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.5.5"
+lazy_static = "1.4.0"
+libc = "0.2.108"
+redhook = "2.0"
+
+[lib]
+name = "hook_workers"
+crate_type = ["dylib"]
+
+[profile.release]
+strip = true
