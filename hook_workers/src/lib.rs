@@ -2,13 +2,13 @@ extern crate lazy_static;
 extern crate libc;
 extern crate redhook;
 
-use libc::{c_char};
+use libc::c_char;
 use regex::Regex;
 use std::ffi::{CStr,CString};
 
 
 lazy_static::lazy_static! {
-    static ref LOG_FNAME_RE: Regex = Regex::new(r"\bfuzz-\d+.log\b").unwrap();
+    static ref LOG_FNAME_RE: Regex = Regex::new(r"\bfuzz-\d+\.log\b").unwrap();
 }
 
 
